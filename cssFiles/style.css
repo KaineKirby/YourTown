@@ -12,9 +12,11 @@ body{
 h2 {
   vertical-align: center;
   text-align: center;
-  
-}
 
+}
+.title h2{
+  margin-left: 40px;
+}
 div {
     vertical-align: center;
     text-align: center;
@@ -191,11 +193,10 @@ div {
     vertical-align: center;
 }
 
-#page3 .wrong{
+#page3 .incorrect{
     background: indianred;
 }
 
-#page3 .right{
+#page3 .correct{
     background: lightgreen;
 }
-
