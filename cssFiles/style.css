@@ -12,6 +12,7 @@ body{
 h2 {
   vertical-align: center;
   text-align: center;
+  
 }
 
 div {
@@ -22,29 +23,29 @@ div {
 
 
 /*top navigation bar*/
-#page1 .topNav ul,#page2 .topNav ul,#page3 .topNav ul, #page4 .topNav ul{
+#page1 .topNav ul,#page2 .topNav ul,#page3 .topNav ul, #page4 .topNav ul, #page5 .topNav ul, #page6 .topNav ul{
     list-style-type: none;
     margin: 0;
-    padding 0;
+    padding: 0;
     overflow: hidden;
     background-color: #333;
 }
 
-#page1 .topNav li,#page2 .topNav li,#page3 .topNav li, #page4 .topNav li{
+#page1 .topNav li,#page2 .topNav li,#page3 .topNav li, #page4 .topNav li, #page5 .topNav li, #page6 .topNav li{
     float:left;
 }
 
-#page1 .topNav li.title,#page2 .topNav li.title,#page3 .topNav li.title, #page4 .topNav li.title{
+#page1 .topNav li.title,#page2 .topNav li.title,#page3 .topNav li.title, #page4 .topNav li.title, #page5 .topNav li.title, #page6 .topNav li.title{
     float:left;
     color: white;
     margin-right: 50px;
 }
 
-#page1 .topNav li.right,#page2 .topNav li.right,#page3 .topNav li.right, #page4 .topNav li.right{
+#page1 .topNav li.right,#page2 .topNav li.right,#page3 .topNav li.right, #page4 .topNav li.right, #page5 .topNav li.right, #page6 .topNav li.right{
     float: right;
 }
 
-#page1 .topNav li a,#page2 .topNav li a,#page3 .topNav li a, #page4 .topNav li a{
+#page1 .topNav li a,#page2 .topNav li a,#page3 .topNav li a, #page4 .topNav li a, #page5 .topNav li a, #page6 .topNav li a{
   display:block;
   color: white;
   text-align: center;
@@ -52,7 +53,7 @@ div {
   text-decoration: none;
 }
 
-#page1 .topNav li a:hover,#page2 .topNav li a:hover,#page3 .topNav li a:hover, #page4 .topNav li a:hover {
+#page1 .topNav li a:hover,#page2 .topNav li a:hover,#page3 .topNav li a:hover, #page4 .topNav li a:hover, #page5 .topNav li a:hover , #page6 .topNav li a:hover  {
   background-color: #111;
 }
 

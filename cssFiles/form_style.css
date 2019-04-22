@@ -1,4 +1,4 @@
-/*Your Town- Form CSS file */
+/*Your Town- CSS file */
 /* Standard everything stuff */
 @import url(https://fonts.googleapis.com/css?family=Raleway);
 * {
@@ -6,14 +6,15 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
     background-image: url("../images/explore_kentucky.jpg") ;
-    background-size: cover;
 }
 h2 {
-  margin-bottom: 50px;
+  vertical-align: center;
+  text-align: center;
+
+}
+.title h2{
+  margin-left: 40px;
 }
 .box {
     position: absolute;
@@ -74,4 +75,71 @@ h2 {
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+div {
+    vertical-align: center;
+    text-align: center;
+    margin-top:10px;
+}
+
+
+/*top navigation bar*/
+#page5 .topNav ul, #page6 .topNav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+#page5 .topNav li, #page6 .topNav li{
+    float:left;
+}
+
+#page5 .topNav li.title, #page6 .topNav li.title{
+    float:left;
+    color: white;
+    margin-right: 50px;
+}
+
+#page5 .topNav li.right, #page6 .topNav li.right{
+    float: right;
+}
+
+#page5 .topNav li a, #page6 .topNav li a{
+  display:block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#page5 .topNav li a:hover , #page6 .topNav li a:hover  {
+  background-color: #111;
+}
+
+/*button/link handler color things*/
+.active{
+  background-color:darkorange;
+}
+
+.button{
+    vertical-align:center;
+    border:none;
+    border-radius:20px;
+    text-align: center;
+    display: inline-block;
+    margin:10px 20px;
+    width: auto;
+    height: 35px;
+    background-color:darkgoldenrod;
+    -webkit-transition-duration: 0.7s; /* Safari */
+    transition-duration: 0.7s;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #555555;
+        color: white;
+    }
 }

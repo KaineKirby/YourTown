@@ -47,22 +47,21 @@ catch(PDOException $error)
         <meta charset="utf-8">
         <title>Your Town - Login</title>
         <link href="../cssFiles/form_style.css" type="text/css" rel="stylesheet" />
-        <link href="../cssFiles/style.css" type="text/css" rel="stylesheet" />
     </head>
 <html>
-    <body>
-      <body id="page1">
+    <body id="page6">
         <div class="topNav">
             <ul>
                 <li class="title"><h2>Welcome to Bowling Green</h2></li>
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="visit.html" id="tToQ">Visit here</a></li>
-                <li><a href="eat.html" id="tToS">Eat here</a></li>
-                <li><a href="living.html" id="tToA">Live here</a></li>
+                <li><a href="../visit.html" id="tToQ">Visit here</a></li>
+                <li><a href="../eat.html" id="tToS">Eat here</a></li>
+                <li><a href="../living.html" id="tToA">Live here</a></li>
                 <li class="right"><a href="register.php">Register</a></li>
                 <li class="right"><a class="active" href="login.php">Login</a></li>
             </ul>
         </div>
+
         <div class="box">
             <h2>Login to Your Town</h2>
             <form method="post">
