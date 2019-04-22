@@ -1,0 +1,18 @@
+Restaurant Name: MexOut
+Address: 555 VETERANS MEMORIAL LANE, BOWLING GREEN
+Description: "Mex-Out brings authentic Mexican food to Bowling Green in a classy environment at an affordable price."
+Rating: 5
+Number of ratings: 1
+
+
+Name: Beech Bend
+Address: 798 Beech Bend Rd, Bowling Green
+Description: "Beech Bend Amusement Park, Water Park, Raceway & Campground is a one of a kind. Fun for all ages. "
+Rating: 3
+Number of ratings: 1
+
+Name: Chandler Property Management
+Address: 908 Broadway Ave, Bowling Green
+Description: "We have all the information you need to choose an apartment home in Bowling Green."
+Raing: 4
+Number of Ratings: 1 
