@@ -11,8 +11,8 @@ try
      $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
      if(isset($_POST["register"]))
      {
-       $username = !empty($_POST["username"]) ? trim($_POST["username"]) : null;
-       $password = !empty($_POST["password"]) ? trim($_POST["password"]) : null;
+       $username = ($_POST["username"]);
+       $password = ($_POST["password"]);
 
        $sql = "SELECT COUNT(username) AS num FROM user WHERE username = :username";
        $stmt = $connect->prepare($sql);

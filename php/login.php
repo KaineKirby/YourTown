@@ -14,17 +14,17 @@ try
      $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
      if(isset($_POST["login"]))
      {
+       $username = ($_POST["username"]);
        $password = $_POST["password"];
        $passwordHashing = sha1($password);
        $query = "SELECT * FROM user WHERE username = :username AND password = :password";
 
        $statement = $connect->prepare($query);
+       $statement->bindValue(':username', $username);
        $statement->bindValue(':password', $passwordHashing);
-       $statement->execute(
-            array('username' => $_POST["username"],'password' => $passwordHashing)
-       );
-       $count = $statement->rowCount();
-       if($count > 0)
+       $result = $statement->execute();
+       echo $passwordHashing;
+       if($result > 0)
        {
             $_SESSION["username"] = $_POST["username"];
             session_start();
