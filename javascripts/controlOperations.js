@@ -29,6 +29,48 @@ function executeLater() {
 }
 
 //some other functions go here 
+function livingPage(){
+   $.ajax(/*our .php file*/ ' .php',
+          {
+               success: function(data){
+                  alert('AJAX call successful');
+                  alert('Data from server:' + data);
+               };
+               error: function(){
+                  alert('Something went wrong.);
+               };
+   });
+
+}
+
+function visitPage(){
+      $.ajax(/*our .php file*/ ' .php',
+          {
+               success: function(data){
+                  alert('AJAX call successful');
+                  alert('Data from server:' + data);
+               };
+               error: function(){
+                  alert('Something went wrong.);
+               };
+   });
+
+}
+
+function eatPage(){
+      $.ajax(/*our .php file*/ ' .php',
+          {
+               success: function(data){
+                  alert('AJAX call successful');
+                  alert('Data from server:' + data);
+               };
+               error: function(){
+                  alert('Something went wrong.);
+               };
+   });
+
+
+}
 
 
 
