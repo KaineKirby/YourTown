@@ -4,7 +4,7 @@
 }
 
 body{
-  background-image: url("../images/explore_kentucky.jpg") ;
+  background-image: url("../images/explore_kentucky.jpg");
 }
 
 h2 {
@@ -15,12 +15,6 @@ h2 {
 .title h2{
   margin-left: 40px;
 }
-div {
-    vertical-align: center;
-    text-align: center;
-    margin-top:10px;
-}
-
 
 /*top navigation bar*/
 .topNav ul{
@@ -90,10 +84,27 @@ div {
 }
 
 /*background block  */
-.putAPlaceHere{
+.description {
+  padding-bottom: 20px;
+}
+.service{
+  margin: 0 auto;
     background-color:slategrey;
-    margin: 0 auto;
     width: 60%;
     margin-top: 40px;
     padding: 20px;
+    text-align: left;
+}
+.title{
+  font-weight: bold;
+}
+.rating_star {
+  width: 25px;
+  height: 25px;
+}
+.rating_title{
+  padding-bottom: 20px;
+}
+.address{
+  padding-bottom: 20px;
 }
