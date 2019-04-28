@@ -1,5 +1,5 @@
 <?php
-session_start();
+//session_start();
 $host = "localhost";
 $dbusername = "root";
 $dbpassword = "";
@@ -23,7 +23,6 @@ try
        $statement->bindValue(':username', $username);
        $statement->bindValue(':password', $passwordHashing);
        $result = $statement->execute();
-       echo $passwordHashing;
        if($result > 0)
        {
             $_SESSION["username"] = $_POST["username"];
@@ -39,6 +38,7 @@ try
 catch(PDOException $error)
 {
      $message = $error->getMessage();
+	 echo $message;
 }
 ?>
 <!DOCTYPE html>

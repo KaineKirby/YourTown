@@ -11,8 +11,8 @@ try
      $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
      if(isset($_POST["register"]))
      {
-       $username = ($_POST["username"]);
-       $password = ($_POST["password"]);
+       $username = $_POST["username"];
+       $password = $_POST["password"];
 
        $sql = "SELECT COUNT(username) AS num FROM user WHERE username = :username";
        $stmt = $connect->prepare($sql);
@@ -29,7 +29,7 @@ try
 
        $passwordHashing = sha1($password);
 
-       $query = "INSERT INTO user (username, password) VALUES (:username, :password)";
+       $query = "INSERT INTO user VALUES (:username, :password)";
        $statement = $connect->prepare($query);
        $statement->bindValue(':username', $username);
        $statement->bindValue(':password', $passwordHashing);
@@ -43,6 +43,8 @@ try
 catch(PDOException $error)
 {
      $message = $error->getMessage();
+	 echo $message;
+
 }
 ?>
 <!DOCTYPE html>
