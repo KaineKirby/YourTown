@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `rating`
 --
-
+CREATE DATABASE bowling_green_services;
 CREATE TABLE `rating` (
   `ID` int(3) NOT NULL,
   `Stars` int(1) NOT NULL,
