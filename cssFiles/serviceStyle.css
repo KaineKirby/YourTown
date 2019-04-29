@@ -89,11 +89,12 @@ h2 {
 }
 .service{
   margin: 0 auto;
-    background-color:slategrey;
-    width: 60%;
-    margin-top: 40px;
-    padding: 20px;
-    text-align: left;
+  background-color:#333;
+  width: 60%;
+  margin-top: 40px;
+  padding: 20px;
+  text-align: left;
+  color: white;
 }
 .title{
   font-weight: bold;
@@ -107,4 +108,15 @@ h2 {
 }
 .address{
   padding-bottom: 20px;
+}
+.user_rating {
+  margin: 0 auto;
+  background-color:#333;
+  width: 60%;
+  margin-top: 40px;
+  padding: 20px;
+  text-align: left;
+}
+.userForm{
+  color: white;
 }

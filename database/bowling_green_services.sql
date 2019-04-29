@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2019 at 09:29 AM
+-- Generation Time: Apr 29, 2019 at 05:38 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `rating`
 --
-CREATE DATABASE bowling_green_services;
+
 CREATE TABLE `rating` (
   `ID` int(3) NOT NULL,
   `Stars` int(1) NOT NULL,
@@ -42,7 +42,10 @@ CREATE TABLE `rating` (
 
 INSERT INTO `rating` (`ID`, `Stars`, `Comment`, `UserName`, `ServiceID`) VALUES
 (1, 5, 'What a wonderful place.', 'Austin', 1),
-(2, 4, 'Great pizza, a little expensive.', 'Austin', 3);
+(2, 4, 'Great pizza, a little expensive.', 'Austin', 3),
+(3, 4, 'Best place to go fishing.', 'Jermaine', 1),
+(5, 5, 'Fantastic vehicles!', 'Austin', 2),
+(6, 1, 'I don\'t even like Corvettes.', 'Jermaine', 2);
 
 -- --------------------------------------------------------
 
@@ -114,7 +117,7 @@ ALTER TABLE `service`
 -- AUTO_INCREMENT for table `rating`
 --
 ALTER TABLE `rating`
-  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `service`

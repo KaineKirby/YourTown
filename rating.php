@@ -20,12 +20,14 @@ if(isset($_SESSION["username"])) {
     <body id="page2">
         <?php
           include "php/navigation.php";
-
+        ?>
+        <div id="comments"></div>
+        <?php
           if(isset($_SESSION["username"])) {
         ?>
-        <div class="rating">
+        <div class="user_rating">
           <div class="userForm">
-            <strong>Leave a rating and a comment</strong>
+            <p id="formTitle">Leave a rating and a comment</p>
             <br>
             <textarea id="newComment" name="userComment" rows="8" cols="80" maxlength="10000"></textarea>
             <br>
@@ -39,6 +41,5 @@ if(isset($_SESSION["username"])) {
           </div>
         </div>
         <?php } ?>
-        <div id="comments"></div>
     </body>
 </html>
