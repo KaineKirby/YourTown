@@ -1,5 +1,6 @@
 <?php
-
+include "php/QueryDatabase.php";
+$ratingValues = generateView2(queryServiceId(1));
 if(isset($_SESSION["username"])) {
   header("location:login_success.php");
 }
@@ -17,11 +18,21 @@ if(isset($_SESSION["username"])) {
 
 </head>
     <body id="page2">
-        <!--TOP NAV element-->
         <?php
           include "php/navigation.php";
         ?>
         <div class="rating">
+          <form class="" action="index.html" method="post">
+            <strong>Leave a rating and a comment</strong>
+            <br>
+            <textarea name="name" rows="8" cols="80" maxlength="10000"></textarea>
+            <br>
+            <button type="submit" name="button">Submit</button>
+          </form>
+
+          <?php
+            echo $ratingValues;
+          ?>
         </div>
     </body>
 </html>
