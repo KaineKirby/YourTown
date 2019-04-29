@@ -1,10 +1,8 @@
 <?php
 include "php/QueryDatabase.php";
-$ratingValues = generateView2(queryServiceId(1));
 if(isset($_SESSION["username"])) {
   header("location:login_success.php");
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -14,25 +12,33 @@ if(isset($_SESSION["username"])) {
 
   <meta charset="utf-8" />
   <link href="cssfiles/serviceStyle.css" type="text/css" rel="stylesheet" />
-  <script src="javascripts/controlOperations.js" type="text/javascript"> </script>
+  <script src="javascripts/controlOperations.js" type="text/javascript"></script>
+  <script src="javascripts/jquery.js" type="text/javascript"></script>
+  <script src="javascripts/commentsOperations.js" type="text/javascript"></script>
 
 </head>
     <body id="page2">
         <?php
           include "php/navigation.php";
+
+          if(isset($_SESSION["username"])) {
         ?>
         <div class="rating">
-          <form class="" action="index.html" method="post">
+          <div class="userForm">
             <strong>Leave a rating and a comment</strong>
             <br>
-            <textarea name="name" rows="8" cols="80" maxlength="10000"></textarea>
+            <textarea id="newComment" name="userComment" rows="8" cols="80" maxlength="10000"></textarea>
             <br>
-            <button type="submit" name="button">Submit</button>
-          </form>
-
-          <?php
-            echo $ratingValues;
-          ?>
+            <input type="radio" name="stars" value="0">0
+            <input type="radio" name="stars" value="1">1
+            <input type="radio" name="stars" value="2">2
+            <input type="radio" name="stars" value="3">3
+            <input type="radio" name="stars" value="4">4
+            <input type="radio" name="stars" value="5">5<br>
+            <button id="commentBtn" name="button">Submit</button>
+          </div>
         </div>
+        <?php } ?>
+        <div id="comments"></div>
     </body>
 </html>

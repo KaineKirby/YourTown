@@ -20,7 +20,7 @@ function queryServiceId($id) {
     $statement->bindColumn(2, $comment);
     $statement->bindColumn(3, $username);
 
-    $ratings = [];
+    $ratingsArray = [];
     while($row = $statement->fetch(PDO::FETCH_BOUND)) {
       $ratings = new stdClass();
       $ratings->stars = $stars;
@@ -47,7 +47,7 @@ function queryServiceData($type) {
     $connect = new PDO("mysql:host=$host; dbname=$database", $dbusername, $dbpassword);
     $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    $query = "SELECT Name, Description, Address, AVG(Stars), COUNT(ServiceID) FROM service LEFT JOIN rating ON IDno = ServiceID WHERE Type = :type GROUP BY IDno";
+    $query = "SELECT Name, Description, Address, AVG(Stars), COUNT(ServiceID), IDno FROM service LEFT JOIN rating ON IDno = ServiceID WHERE Type = :type GROUP BY IDno";
 
     $statement = $connect->prepare($query);
     $statement->bindValue(':type', $type);
@@ -58,6 +58,8 @@ function queryServiceData($type) {
     $statement->bindColumn(3, $address);
     $statement->bindColumn(4, $rating);
     $statement->bindColumn(5, $numOfRatings);
+    $statement->bindColumn(6, $serviceID);
+
 
     $services = [];
     while($row = $statement->fetch(PDO::FETCH_BOUND)) {
@@ -67,6 +69,7 @@ function queryServiceData($type) {
       $services->address = $address;
       $services->rating = $rating;
       $services->numOfRatings = $numOfRatings;
+      $services->serviceID = $serviceID;
 
       $serviceArray[] = $services;
     }
@@ -86,13 +89,14 @@ function generateView($serviceArray) {
     $description = $service->description;
     $address = $service->address;
     $rating = $service->rating;
+    $serviceID = $service->serviceID;
     if($rating == null) {
       $rating = 0;
     }
     $numOfRatings = $service->numOfRatings;
 
     $viewStr = $viewStr . "<div class='service'>";
-    $viewStr = $viewStr . "<div class='rating_title'><a href= 'rating.php'>$name</a></div>";
+    $viewStr = $viewStr . "<div class='rating_title'><a href= 'rating.php?id=$serviceID'>$name</a></div>";
     $viewStr = $viewStr . "<div class= 'description'>$description</div>";
     $viewStr = $viewStr . "<div class= 'address'>$address</div>";
     $viewStr = $viewStr . "<div class= 'rating'>";
