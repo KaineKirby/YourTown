@@ -90,3 +90,13 @@ div {
 .hideMe{
      clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
 }
+.image_collage {
+  width: 500px;
+  height: 500px;
+  border: solid 2px ;
+  box-shadow: black 3px 3px 3px;
+}
+#main_title{
+  color: white;
+  text-shadow: black 5px 5px 5px;
+}

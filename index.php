@@ -18,7 +18,13 @@
         ?>
 
         <div>
-            <h1> Welcome to Bowling Green, Your Town</h1>
+            <h1 id="main_title"> Welcome to Bowling Green, Your Town</h1>
+            <img class="image_collage" src="images/32.jpg">
+            <img class="image_collage" src="images/35.jpg">
+            <img class="image_collage" src="images/frisbeee_boi.jpg">
+            <img class="image_collage" src="images/15.jpg">
+            <img class="image_collage" src="images/capitol.jpg">
+            <img class="image_collage" src="images/04.jpg">
         </div>
     </body>
 </html>
