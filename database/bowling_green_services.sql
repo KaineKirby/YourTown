@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 29, 2019 at 05:38 AM
+-- Generation Time: Apr 29, 2019 at 06:09 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -21,7 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `bowling_green_services`
 --
-
+CREATE DATABASE bowling_green_services;
 -- --------------------------------------------------------
 
 --
@@ -45,7 +45,14 @@ INSERT INTO `rating` (`ID`, `Stars`, `Comment`, `UserName`, `ServiceID`) VALUES
 (2, 4, 'Great pizza, a little expensive.', 'Austin', 3),
 (3, 4, 'Best place to go fishing.', 'Jermaine', 1),
 (5, 5, 'Fantastic vehicles!', 'Austin', 2),
-(6, 1, 'I don\'t even like Corvettes.', 'Jermaine', 2);
+(6, 1, 'I don\'t even like Corvettes.', 'Jermaine', 2),
+(7, 3, 'The burgers are decent, but the beer is...better', 'Austin', 4),
+(8, 1, 'Don\'t buy real estate with these guys. Terrible customer service!', 'Austin', 5),
+(9, 5, 'Fantastic agents with this company. I would recommend them to everyone.', 'Austin', 6),
+(10, 2, 'This pizza is trash yo', 'Jermaine', 3),
+(11, 4, 'Good food and great staff!', 'Jermaine', 4),
+(12, 5, 'This company is good, bought my house with them.', 'Jermaine', 5),
+(13, 0, 'Never had any business with these people...', 'Jermaine', 6);
 
 -- --------------------------------------------------------
 
@@ -117,7 +124,7 @@ ALTER TABLE `service`
 -- AUTO_INCREMENT for table `rating`
 --
 ALTER TABLE `rating`
-  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `service`
